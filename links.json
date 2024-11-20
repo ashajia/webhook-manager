@@ -1,18 +1,14 @@
 [
   {
-    "name": "磨铁文学Jenkins",
-    "url": "http://jks.motie.cn"
+    "name": "百度",
+    "url": "https://www.baidu.com"
   },
   {
-    "name": "来看阅读Jenkins",
-    "url": "http://ci.motie.cn"
+    "name": "必应",
+    "url": "https://www.bing.com"
   },
   {
-    "name": "磨铁集团Jenkins",
-    "url": "http://ci.xiron.motie.cn"
-  },
-  {
-    "name": "磨铁娱乐Jenkins",
-    "url": "http://jks.motieyule.net"
+    "name": "谷歌",
+    "url": "https://www.google.com"
   }
 ]
