@@ -20,4 +20,10 @@ node server.js
 - 可支持清单批量设置延迟时间和批量删除。
 - 所有数据本地json保存
 - logo（100*100）可以替换public目录下的logo.svg（我是直接用的Jenkins的）
+- 触发过程中，触发清单会有状态显示和颜色显示
+- 触发失败会有弹窗，把失败原因反馈到弹窗上
+- 常用链接，就是常用链接
 ![image](https://github.com/user-attachments/assets/b631d2f1-139b-425d-ab05-afcac8c9cc3e)
+
+支持定制
+![image](https://github.com/user-attachments/assets/f5c5fa49-670e-46d5-b108-6d97c4489912)
