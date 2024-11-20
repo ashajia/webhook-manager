@@ -26,4 +26,4 @@ node server.js
 ![image](https://github.com/user-attachments/assets/b631d2f1-139b-425d-ab05-afcac8c9cc3e)
 
 支持定制
-<img src="https://github.com/user-attachments/assets/f5c5fa49-670e-46d5-b108-6d97c4489912" alt="赞赏我" width="300" height="350">
+<img src="https://github.com/user-attachments/assets/f5c5fa49-670e-46d5-b108-6d97c4489912" alt="赞赏我" width="200">
