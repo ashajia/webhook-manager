@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook触发清单</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="d-flex align-items-center mb-4">
+            <img src="logo.svg" alt="Logo" width="100" height="100" class="me-3">
+            <h2 class="mb-0">Webhook触发清单</h2>
+        </div>
+        <div class="row">
+            <!-- 左侧存储列表 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Webhook存储列表</h5>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="storageSearch" placeholder="搜索webhook...">
+                        </div>
+                        <ul id="webhookStorage" class="list-group">
+                            <!-- 存储列表项将通过JavaScript动态添加 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧主要内容 -->
+            <div class="col-md-9">
+                <!-- 添加新webhook表单 -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form id="webhookForm">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="webhookName" placeholder="名称" required>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="url" class="form-control" id="webhookUrl" placeholder="Webhook URL" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="d-flex gap-2">
+                                        <button type="submit" class="btn btn-primary">添加到清单</button>
+                                        <button type="button" id="saveToStorage" class="btn btn-secondary">保存到存储</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- webhook列表 -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <!-- 添加批量操作工具栏 -->
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="checkbox" id="selectAll">
+                                <label class="form-check-label" for="selectAll">全选</label>
+                            </div>
+                            <div class="d-flex align-items-center me-3">
+                                <label class="me-2">批量设置延迟：</label>
+                                <input type="number" class="form-control form-control-sm" id="batchDelay" 
+                                       style="width: 80px;" min="0" placeholder="秒">
+                                <button class="btn btn-sm btn-outline-primary ms-2" id="applyBatchDelay">应用</button>
+                            </div>
+                            <button class="btn btn-sm btn-outline-danger" id="batchDelete">批量删除</button>
+                        </div>
+                        <ul id="webhookList" class="list-group">
+                            <!-- 列表项将通过JavaScript动态添加 -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 触发控制面板 -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-end">
+                            <div class="col-md-4">
+                                <label class="form-label">计划触发时间</label>
+                                <input type="text" class="form-control" id="triggerDateTime">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="d-flex gap-2">
+                                    <button id="triggerButton" class="btn btn-success">定时触发</button>
+                                    <button id="immediateButton" class="btn btn-primary">立即触发</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 在最后一个 card 后面添加 -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">常用链接</h5>
+                        
+                        <!-- 添加新链接表单 -->
+                        <form id="linkForm" class="mb-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="linkName" placeholder="链接名称" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="url" class="form-control" id="linkUrl" placeholder="URL" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary w-100">添加链接</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- 链接列表 -->
+                        <div class="list-group" id="linkList">
+                            <!-- 链接将通过JavaScript动态添加 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

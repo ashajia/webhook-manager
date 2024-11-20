@@ -1,0 +1,50 @@
+{
+  "groups": [
+    {
+      "name": "默认分组",
+      "id": "default",
+      "expanded": true,
+      "webhooks": [
+        {
+          "name": "w1",
+          "url": "http://getman.cn/echo"
+        },
+        {
+          "name": "w4",
+          "url": "http://getman.cn/echo"
+        },
+        {
+          "name": "we5",
+          "url": "http://getman.cn/echo"
+        },
+        {
+          "name": "w6",
+          "url": "http://getman.cn/echo"
+        },
+        {
+          "name": "sdf",
+          "url": "http://getman.cn/echo"
+        }
+      ]
+    },
+    {
+      "name": "集团",
+      "id": "group_1732022724734",
+      "expanded": true,
+      "webhooks": [
+        {
+          "name": "royalty-info-dao",
+          "url": "http://admin:110ebf92f6dd9f7a15901af88f62e2e69c@ci.xiron.motie.cn/job/royalty-info/job/royalty-info-dao/build"
+        },
+        {
+          "name": "royalty-info-api",
+          "url": "http://admin:110ebf92f6dd9f7a15901af88f62e2e69c@ci.xiron.motie.cn/job/royalty-info/job/royalty-info-api/build"
+        },
+        {
+          "name": "royalty-info-rpc-service",
+          "url": "http://admin:110ebf92f6dd9f7a15901af88f62e2e69c@ci.xiron.motie.cn/job/royalty-info/job/royalty-info-rpc-service/build"
+        }
+      ]
+    }
+  ]
+}
